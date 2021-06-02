@@ -1,0 +1,25 @@
+{
+  "name": "aspect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "asbuild:untouched": "asc assembly/index.ts --target debug",
+    "asbuild:optimized": "asc assembly/index.ts --target release",
+    "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized",
+    "test": "asp --verbose",
+    "test:ci": "asp --summary"
+  },
+  "author": "",
+  "optionalDependencies": {},
+  "license": "ISC",
+  "devDependencies": {
+    "@as-pect/cli": "^6.1.1",
+    "as-wasi": "^0.4.5",
+    "assemblyscript": "^0.18.32",
+    "wasi": "0.0.6"
+  },
+  "dependencies": {
+    "@assemblyscript/loader": "^0.18.32"
+  }
+}
